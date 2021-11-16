@@ -6,7 +6,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,12 +14,11 @@ class MainActivity : AppCompatActivity() {
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)      //указали toolbar вместо actionBar и все свойства
         setSupportActionBar(toolbar)                           //actionBar активити передаст к Toolbar
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
-//        menu?.add("menu 10")                                       //програмно
+//        menu?.add("menu 10")                                       //програмно создали
 //        menu?.add("menu 20")
 //        menu?.add("menu 30")
         return super.onCreateOptionsMenu(menu)
@@ -48,8 +46,4 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, item.title, Toast.LENGTH_SHORT).show()
         return super.onOptionsItemSelected(item)
     }
-
-
-
-
 }
