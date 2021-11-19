@@ -21,6 +21,5 @@ class MainActivity : AppCompatActivity() {
             list.add("ITEM $i")
         }
         adapter.setData(list)
-
     }
 }
