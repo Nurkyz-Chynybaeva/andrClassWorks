@@ -11,8 +11,9 @@ class PlanetAdapter : RecyclerView.Adapter<PlanetAdapter.PlanetHolder>() {
     val planetList = ArrayList<Planet>()
 
     class PlanetHolder(item: View) : RecyclerView.ViewHolder(item) {
+
         val binding = PlanetItemBinding.bind(item)
-        fun bind(planet: Planet) = with(binding) {
+        fun bind(planet: Planet) = binding.apply {
             img1.setImageResource(planet.imageId)
             txt1.text = planet.title
 
