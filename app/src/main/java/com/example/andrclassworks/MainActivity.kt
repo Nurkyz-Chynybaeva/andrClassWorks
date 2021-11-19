@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         for(i in 0..29){
             list.add("ITEM $i")
         }
+        
         adapter.setData(list)
     }
 }
+
