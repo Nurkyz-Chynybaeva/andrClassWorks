@@ -15,23 +15,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val recycler = findViewById<RecyclerView>(R.id.recycler)
-        val layoutManager = LinearLayoutManager(this)
-        val adapter = SimpleAdapter {
-            Toast.makeText(this, "ITEM -$it", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, MainActivity2::class.java)
-            intent.putExtra("text", "item - $it")
-            startActivity(intent)
+//        val recycler = findViewById<RecyclerView>(R.id.recycler)
+//        val layoutManager = LinearLayoutManager(this)
+//        val adapter = SimpleAdapter {
+//            Toast.makeText(this, "ITEM -$it", Toast.LENGTH_SHORT).show()
+//           val fragment = supportFragmentManager.beginTransaction()
+//                fragment.add(R.id.container, Fragment1())
+//                fragment.commit()
+//
+////            val intent = Intent(this, MainActivity2::class.java)
+////            intent.putExtra("text", "item - $it")
+////            startActivity(intent)
+//        }
+//
+//        recycler.layoutManager = layoutManager
+//        recycler.adapter = adapter
+//        recycler.addItemDecoration(DividerItemDecoration(this, RecyclerView.VERTICAL))
+//
+//        val list = mutableListOf<String>()
+//        for (i in 0..20) {
+//            list.add("ITEM -$i")
+//        }
+//        adapter.setData(list)
         }
-
-        recycler.layoutManager = layoutManager
-        recycler.adapter = adapter
-        recycler.addItemDecoration(DividerItemDecoration(this, RecyclerView.VERTICAL))
-
-        val list = mutableListOf<String>()
-        for (i in 0..20) {
-            list.add("ITEM -$i")
-        }
-        adapter.setData(list)
-    }
 }
