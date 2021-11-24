@@ -1,32 +1,34 @@
 package com.example.andrclassworks
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import net.objecthunter.exp4j.Expression
+import net.objecthunter.exp4j.ExpressionBuilder
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.e("TAG", "Berg: onCreate")
+        Log.e(TAG, "Berg: onCreate")
 
-        val txt = findViewById<TextView>(R.id.txt_hello)
-        val btn = findViewById<Button>(R.id.btn)
+        val text = findViewById<TextView>(R.id.txt)
+        val button = findViewById<Button>(R.id.btn)
+        button.setOnClickListener {
+//            val intent = Intent(this, MainActivity2::class.java)
+//            startActivity(intent)
+            val expr = "2+2*2"
+            val exprs = ExpressionBuilder(expr).build()
+            val result = exprs.evaluate()
+            text.text = result.toString()
 
-        var count = 0
-        btn.setOnClickListener {
-           count++
-            //count = count + 1
-
-            //count++
-            //count + 1
-            //count = <- (count + 1)
-            txt.text = count.toString()
         }
+
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -41,32 +43,36 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.e("TAG", "Berg: onStart")
+        Log.e(TAG, "Berg: onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.e("TAG", "Berg: onResume")
+        Log.e(TAG, "Berg: onResume")
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.e("TAG", "Berg: onRestart")
+        Log.e(TAG, "Berg: onRestart")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.e("Berg","onPause")
+        Log.e(TAG, "Berg: onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.e("TAG", "Berg: onStop")
+        Log.e(TAG, "Berg: onStop")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.e("TAG", "Berg: onDestroy")
+        Log.e(TAG, "Berg: onDestroy")
         // ---
+    }
+
+    companion object {
+        private const val TAG = "MainActivity1"
     }
 }
