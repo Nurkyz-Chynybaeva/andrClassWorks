@@ -1,78 +1,83 @@
 package com.example.andrclassworks
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import net.objecthunter.exp4j.Expression
-import net.objecthunter.exp4j.ExpressionBuilder
+import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
+import com.example.andrclassworks.MainActivity3.Companion.ACTION_1
+import com.example.andrclassworks.MainActivity3.Companion.ACTION_2
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.e(TAG, "Berg: onCreate")
 
-        val text = findViewById<TextView>(R.id.txt)
-        val button = findViewById<Button>(R.id.btn)
-        button.setOnClickListener {
-//            val intent = Intent(this, MainActivity2::class.java)
-//            startActivity(intent)
-            val expr = "2+2*2"
-            val exprs = ExpressionBuilder(expr).build()
-            val result = exprs.evaluate()
-            text.text = result.toString()
+        val button1 = findViewById<AppCompatButton>(R.id.btn)
+        val button2 = findViewById<AppCompatButton>(R.id.btn2)
+        val button3 = findViewById<AppCompatButton>(R.id.btn3)
+        val button4 = findViewById<AppCompatButton>(R.id.btn4)
+        val button5 = findViewById<AppCompatButton>(R.id.btn5)
 
+        button1.setOnClickListener {goTo1()}
+        button2.setOnClickListener {goToWeb()}
+        button3.setOnClickListener {goToGallery()}
+        button4.setOnClickListener {goToActivityWithAction1()}
+        button5.setOnClickListener {goToActivityWithAction2()}
+
+    }
+
+    private fun goTo1(){
+        val intent = Intent("myAction")
+        startActivity(intent)
+    }
+
+    private fun goToWeb(){
+        val address = Uri.parse("http://google.com")
+        val intent2 = Intent(Intent.ACTION_VIEW, address)
+        if (intent2.resolveActivity(packageManager) != null){
+            startActivity(intent2)
+        }else{
+            Toast.makeText(this, "hgiejgiegji", Toast.LENGTH_SHORT).show()
         }
-
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putString("key", "value")
+    private fun goToGallery() {
+        val intent3 = Intent(Intent.ACTION_VIEW)
+        intent3.type = "image/*"
+        startActivity(intent3)
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        val value = savedInstanceState.getString("key")
+    private fun goToActivityWithAction1(){
+        val intent4 = Intent(ACTION_1)
+        intent4.putExtra("key", "goToActivityWithAction1")
+        startActivity(intent4)
+    }
+    private fun goToActivityWithAction2(){
+        val intent4 = Intent(ACTION_2)
+        intent4.putExtra("key", "goToActivityWithAction2")
+        startActivity(intent4)
     }
 
-    override fun onStart() {
-        super.onStart()
-        Log.e(TAG, "Berg: onStart")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.e(TAG, "Berg: onResume")
-    }
-
-    override fun onRestart() {
-        super.onRestart()
-        Log.e(TAG, "Berg: onRestart")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.e(TAG, "Berg: onPause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.e(TAG, "Berg: onStop")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.e(TAG, "Berg: onDestroy")
-        // ---
-    }
-
-    companion object {
-        private const val TAG = "MainActivity1"
-    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
