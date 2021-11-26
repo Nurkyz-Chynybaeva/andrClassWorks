@@ -13,5 +13,4 @@ class MainActivity2 : AppCompatActivity(), OnButtonClicked {
        val fragment2 = supportFragmentManager.findFragmentById(R.id.container2M2) as Fragment2
         fragment2.setText(enteredText)
 
-    }
-}
+    }}

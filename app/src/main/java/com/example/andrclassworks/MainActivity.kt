@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity(), OnButtonClicked{
         text.text = enteredText
     }
 
-
     private fun initFragment(){
         supportFragmentManager.beginTransaction()
             .add(R.id.containerM1, FragmentMain())

@@ -19,8 +19,8 @@ class Fragment1: Fragment(R.layout.fragment1){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val button1 = view.findViewById<AppCompatButton>(R.id.frg1_btn1)
-        val button2 = view.findViewById<AppCompatButton>(R.id.frg1_btn2)
+        val button1 = view.findViewById<AppCompatButton>(R.id.btn1F1)
+        val button2 = view.findViewById<AppCompatButton>(R.id.btn2F1)
 
         button1.setOnClickListener(::onClick)
         button2.setOnClickListener(::onClick)
@@ -28,11 +28,11 @@ class Fragment1: Fragment(R.layout.fragment1){
 
     private fun onClick(view: View){
         when(view.id){
-            R.id.frg1_btn2 -> {
+            R.id.btn1F1 -> {
                 listener.onButtonClicked("hello")
 
             }
-            R.id.frg1_btn2 -> {
+            R.id.btn2F1 -> {
                 listener.onButtonClicked("hi")
 
             }
