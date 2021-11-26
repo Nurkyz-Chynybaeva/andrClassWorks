@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         initFragment()
     }
 
-        private fun initFragment() {
+        private fun initFragment(){
             supportFragmentManager.beginTransaction()
                 .add(R.id.containerForFragment1, Fragment1())
                 .commit()

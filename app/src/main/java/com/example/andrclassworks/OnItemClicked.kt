@@ -1,5 +1,5 @@
 package com.example.andrclassworks
 
 interface OnItemClicked {
-    fun onClicked()
+    fun onClicked(entered: String)
 }
