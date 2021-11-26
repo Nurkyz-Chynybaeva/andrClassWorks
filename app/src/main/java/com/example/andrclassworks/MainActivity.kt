@@ -17,11 +17,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Log.e(TAG, "Berg: onCreate")
 
-        val text = findViewById<TextView>(R.id.txt)
-        val button = findViewById<Button>(R.id.btn)
+        val text = findViewById<TextView>(R.id.txtM1)
+        val button = findViewById<Button>(R.id.btnM1)
+
         button.setOnClickListener {
 //            val intent = Intent(this, MainActivity2::class.java)
 //            startActivity(intent)
+
             val expr = "2+2*2"
             val exprs = ExpressionBuilder(expr).build()
             val result = exprs.evaluate()
@@ -69,7 +71,6 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.e(TAG, "Berg: onDestroy")
-        // ---
     }
 
     companion object {

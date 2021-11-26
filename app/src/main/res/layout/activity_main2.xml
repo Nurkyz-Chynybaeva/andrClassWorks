@@ -6,17 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
-    <TextView
-        android:id="@+id/txt_hello"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtM2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:textColor="@color/black"
-        android:text="This is second MainActivity!"
+        android:text="This is second activity!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

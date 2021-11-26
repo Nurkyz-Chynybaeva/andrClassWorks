@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txt"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtM1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
@@ -20,19 +20,12 @@
         />
 
 
-    <EditText
-        android:id="@+id/edit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="entered"/>
-
-    <Button
-        android:id="@+id/btn"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnM1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="go to activity2"
-        app:layout_constraintTop_toBottomOf="@id/edit"/>
+        app:layout_constraintTop_toBottomOf="@id/txtM1"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
