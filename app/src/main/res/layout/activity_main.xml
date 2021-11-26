@@ -19,13 +19,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-
-        style="@style/BaseButton"
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="btn"
+        android:textColor="@drawable/text_color"
         android:layout_margin="20dp"
+        android:background="@drawable/bg_button"
         app:layout_constraintTop_toBottomOf="@id/txt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
