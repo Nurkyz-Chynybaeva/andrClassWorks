@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun goToActivity3(){
 
-        val intent = Intent(ACTION_1)
+//        val intent = Intent(ACTION_1)
         intent.putExtra("key", "hello")
         startActivity(intent)
 
