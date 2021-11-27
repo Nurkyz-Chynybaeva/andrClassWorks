@@ -13,6 +13,7 @@
         android:textSize="30sp"
         android:text="Hello World!"
         android:textColor="@color/black"
+        app:layout_constraintVertical_bias="0.2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -20,10 +21,25 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn1M1"
         android:layout_margin="10dp"
-        android:text="go to Activity2"
+        android:text="btn1"
         app:layout_constraintTop_toBottomOf="@id/txt1M1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
-
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn2M1"
+        android:layout_margin="10dp"
+        android:text="btn2"
+        app:layout_constraintTop_toBottomOf="@id/btn1M1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn3M1"
+        android:layout_margin="10dp"
+        android:text="btn3"
+        app:layout_constraintTop_toBottomOf="@id/btn2M1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
