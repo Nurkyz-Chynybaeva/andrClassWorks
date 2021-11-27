@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt"
+        android:id="@+id/txt1M1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp"
@@ -20,42 +20,12 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn"
+        android:id="@+id/btn1M1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="GO1"
-        app:layout_constraintTop_toBottomOf="@id/txt"/>
+        android:text="GO"
+        app:layout_constraintTop_toBottomOf="@id/txt1M1"/>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="GO2"
-        app:layout_constraintTop_toBottomOf="@id/btn"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="GO3"
-        app:layout_constraintTop_toBottomOf="@id/btn2"/>
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="go to activity with action 1"
-        app:layout_constraintTop_toBottomOf="@id/btn3"/>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="go to activity with action 2"
-        app:layout_constraintTop_toBottomOf="@id/btn4"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
