@@ -10,7 +10,7 @@ class MainActivity2 : AppCompatActivity(), OnButtonClicked {
     }
 
     override fun onClicked(enteredText: String) {
-      val fragment2 = supportFragmentManager.findFragmentById(R.id.secondContainer) as Fragment2
+        val fragment2 = supportFragmentManager.findFragmentById(R.id.secondContainer) as Fragment2
         fragment2.setText(enteredText)
 
     }

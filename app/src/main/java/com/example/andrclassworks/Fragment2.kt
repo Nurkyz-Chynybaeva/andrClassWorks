@@ -10,10 +10,9 @@ class Fragment2: Fragment(R.layout.fragment2){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-       text = view.findViewById(R.id.txtF2)
+        text = view.findViewById(R.id.txtF2)
     }
-
     fun setText(string: String){
-     text.text = string
+        text.text = string
     }
 }
