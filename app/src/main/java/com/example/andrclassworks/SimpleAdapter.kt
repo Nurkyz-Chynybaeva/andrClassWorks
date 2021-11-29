@@ -6,9 +6,7 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 
-class SimpleAdapter(
-    private val click: (pos: Int) -> Unit
-) : RecyclerView.Adapter<SimpleAdapter.ViewHolder>() {
+class SimpleAdapter(private val click: (pos: Int) -> Unit) : RecyclerView.Adapter<SimpleAdapter.ViewHolder>(){
     private var list = listOf<String>()
 
     fun setData(list: List<String>) {

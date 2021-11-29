@@ -3,19 +3,16 @@ package com.example.andrclassworks
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnItemClicked {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        initFragment()
     }
 
-        private fun initFragment(){
-            supportFragmentManager.beginTransaction()
-                .add(R.id.containerForFragment1, Fragment1())
-                .commit()
-        }
+    override fun onClicked(entered: String) {
+        val fragment2 = supportFragmentManager.findFragmentById(R.id.containerFrag) as Fragment2
+//        fragment2.setValut(entered)
+    }
 
 }
