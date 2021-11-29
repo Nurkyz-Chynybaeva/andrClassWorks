@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         button1.setOnClickListener { goTo1() }
         button2.setOnClickListener { goTo2() }
         button3.setOnClickListener { goToGallery() }
-
     }
 
 
@@ -47,11 +46,5 @@ class MainActivity : AppCompatActivity() {
 //        val intent = Intent(ACTION_1)
         intent.putExtra("key", "hello")
         startActivity(intent)
-
-
     }
 }
-
-
-
-
