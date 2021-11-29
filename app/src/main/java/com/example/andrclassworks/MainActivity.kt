@@ -16,11 +16,11 @@ class MainActivity : AppCompatActivity() {
         recycler.adapter = adapter
         recycler.layoutManager = LinearLayoutManager(this)
 
-        var list = mutableListOf<String>()
-        for(i in 0..29){
-            list.add("ITEM $i")
+        val list = mutableListOf<String>()
+        for (i in 0..29) {
+            list.add("item - $i")
         }
-        
+
         adapter.setData(list)
     }
 }
