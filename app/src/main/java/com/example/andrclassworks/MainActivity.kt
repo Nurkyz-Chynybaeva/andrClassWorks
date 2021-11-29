@@ -16,35 +16,13 @@ class MainActivity : AppCompatActivity() {
         val button2 = findViewById<AppCompatTextView>(R.id.btn2M1)
         val button3 = findViewById<AppCompatTextView>(R.id.btn3M1)
 
-        button1.setOnClickListener { goTo1() }
-        button2.setOnClickListener { goTo2() }
-        button3.setOnClickListener { goToGallery() }
-    }
-
-
-    private fun goTo1(){
-        val intent = Intent("myAction")
-        startActivity(intent)
-    }
-    private fun goTo2(){
-        val address = Uri.parse("https://github.com/Nurkyz-Chynybaeva?tab=repositories")
-        val intent = Intent(Intent.ACTION_VIEW, address)
-
-        if (intent.resolveActivity(packageManager) != null) {
+        button1.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.type = "image/*"
             startActivity(intent)
-        } else {
-            Toast.makeText(this, "error not find", Toast.LENGTH_SHORT).show()
         }
-    }
-    private fun goToGallery() {
-        val intent = Intent(Intent.ACTION_VIEW)
-        intent.type = "image/*"
-        startActivity(intent)
-    }
-    private fun goToActivity3(){
 
-//        val intent = Intent(ACTION_1)
-        intent.putExtra("key", "hello")
-        startActivity(intent)
     }
+
+
 }
