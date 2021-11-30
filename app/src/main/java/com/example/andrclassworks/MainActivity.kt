@@ -13,11 +13,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-       val btn1 = findViewById<AppCompatButton>(R.id.btn1M1)
+        val btn1 = findViewById<AppCompatButton>(R.id.btn1M1)
+        val btn2 = findViewById<AppCompatButton>(R.id.btn2M1)
         btn1.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.type = "image/*"
             startActivity(intent)
         }
+        btn2.setOnClickListener {
+            val intent = Intent("myAction")
+            startActivity(intent)
+        }
+
     }
 }
