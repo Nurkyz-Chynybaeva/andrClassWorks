@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {    //этот метод вызывается тогда, когда кликаем на пункты меню
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        //этот метод вызывается тогда, когда кликаем на пункты меню
         when(item.itemId){
             R.id.menu1 -> {
                 supportFragmentManager.beginTransaction()
